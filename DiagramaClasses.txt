@@ -1,0 +1,90 @@
+         +-------------------+
+         |    Database       |
+         +-------------------+
+         | - driver          |
+         +-------------------+
+         | + close()         |
+         | + execute_query() |
+         | + drop_all()      |
+         +-------------------+
+                ^
+                |
+         +-------------------+
+         |  CorpDatabase     |
+         +-------------------+
+         | - db: Database    |
+         +-------------------+
+         | + create_person() |
+         | + create_corporation() |
+         | + create_branch() |
+         | + define_position() |
+         | + create_subordination() |
+         | + create_representation() |
+         | + create_ownership() |
+         | + create_branch_relation() |
+         | + define_corp_name() |
+         | + define_corp_value() |
+         | + define_person_name() |
+         | + define_branch_name() |
+         | + get_people() |
+         | + get_avg_analyst_age() |
+         | + get_corps() |
+         | + get_branches() |
+         | + get_owner() |
+         | + get_subbordinates() |
+         | + delete_person() |
+         | + delete_corp() |
+         | + delete_branch() |
+         +-------------------+
+                ^
+                |
+         +-------------------+
+         |      Console      |
+         +-------------------+
+         | - corp2: CorpDatabase |
+         +-------------------+
+         | + exibir() |
+         | + mostrar_opcoes() |
+         | + owner_out() |
+         | + subordinates_of() |
+         | + anal_avg_age() |
+         | + all_p() |
+         | + all_c() |
+         | + all_b() |
+         | + delete_pers() |
+         | + delete_corp() |
+         | + delete_bran() |
+         | + update_person_name() |
+         | + update_corp_name() |
+         | + update_corp_value() |
+         | + update_branch_name() |
+         | + sair() |
+         +-------------------+
+
+
+                +-------------+
+                |    Corp     |
+                +-------------+
+                | - name      |
+                | - id        |
+                | - value
+		   		  |
+                +-------------+
+                | + add_branch() |
+                | + remove_branch() |
+                +-------------+
+                      ^
+                      |
+                      |
+                      |
+                      v
+                +-------------+
+                |   Branch    |
+                +-------------+
+                | - name      |
+                | - id        |
+                | - corp      |
+                +-------------+
+                | + set_corp()   |
+                +-------------+
+
